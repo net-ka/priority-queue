@@ -17,14 +17,30 @@ class Node {
 				this.right = node;
 			}
 		}
+		node.parent = this;
 	}
 
 	removeChild(node) {
+		if (this.left == node) {
+			this.left = null;
+			node.parent = null;
+			return;
+		}
+		if (this.right == node) {
+			this.right = null;
+			node.parent = null;
+			return;
+		}
+		if (this.right != node & this.left != node) {
+			throw error;
+		}
 
 	}
 
 	remove() {
-
+		if (this.parent != null) {
+			this.parent.removeChild(this);
+		}
 	}
 
 	swapWithParent() {
