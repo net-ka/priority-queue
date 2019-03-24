@@ -9,7 +9,14 @@ class Node {
 	}
 
 	appendChild(node) {
-
+		if (this.left == null || this.right == null) {
+			if (this.left == null) {
+				this.left = node;
+			}
+			else {
+				this.right = node;
+			}
+		}
 	}
 
 	removeChild(node) {
@@ -17,12 +24,12 @@ class Node {
 	}
 
 	remove() {
-		
+
 	}
 
 	swapWithParent() {
-		
-	}
-}
 
+	}
+
+}
 module.exports = Node;
