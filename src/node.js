@@ -1,6 +1,11 @@
 class Node {
 	constructor(data, priority) {
-
+		this.data = data;
+		this.priority = priority;
+		this.root = null;
+		this.parent = null;
+		this.left = null;
+		this.right = null;
 	}
 
 	appendChild(node) {
@@ -12,7 +17,7 @@ class Node {
 	}
 
 	remove() {
-
+		
 	}
 
 	swapWithParent() {
